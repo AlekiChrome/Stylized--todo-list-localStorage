@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(120deg, #a2cdfc, #2da7b3);
+    color: whitesmoke;
+    font-family: 'Raleway', sans-serif;
+    min-height: 100vh;
+}
+
+header h1 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+header,
+form {
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
