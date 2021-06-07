@@ -19,10 +19,22 @@ button.addEventListener("click", (e) => {
     const listItem = document.createElement('li');
     listItem.classList.add("list-item");
     listItem.innerText = todoInput.value;
-    unordered.appendChild(listItem);
+    todoDiv.appendChild(listItem);
 
     todoInput.value = "";
 
-    counter.innerText = `${allItems.length}`;
+    counter.innerText = ` ${allItems.length}`;
+
+    const completedBtn = document.createElement("button");
+    completedBtn.innerHTML = '<i class="fas fa-check-double"></i>'
+    completedBtn.classList.add("completed-btn");
+    todoDiv.appendChild(completedBtn);
+
+    const deleteBtn = document.createElement("delete-btn");
+    deleteBtn.innerHTML = '<i class="fas fa-trash"></i>'
+    deleteBtn.classList.add("delete-btn");
+    todoDiv.appendChild(deleteBtn);
+
+    unordered.appendChild(todoDiv);
 
 })
