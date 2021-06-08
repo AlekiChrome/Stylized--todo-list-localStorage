@@ -6,10 +6,6 @@ const counter = document.querySelector(".counter b");
 
 const allItems = unordered.children;
 
-
-
-
-
 button.addEventListener("click", (e) => {
     e.preventDefault();
 
@@ -35,6 +31,25 @@ button.addEventListener("click", (e) => {
 
     unordered.appendChild(todoDiv);
 
+    unordered.addEventListener("click", (e) => {
+
+        const item = e.target;
+
+        if (item.classList[0] === "delete-btn") {
+            const todo = item.parentElement;
+            todo.classList.add("fall");
+            todo.addEventListener("transitionend", () => {
+                todo.remove();
+            })
+        }
+
+        if (item.classList[0] === "completed-btn") {
+            const todo = item.parentElement;
+            todo.classList.toggle("completed");
+        }
+    });
+
     counter.innerText = `${allItems.length}`;
+
 
 })
