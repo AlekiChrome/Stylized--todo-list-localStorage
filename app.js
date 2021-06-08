@@ -24,7 +24,7 @@ button.addEventListener("click", (e) => {
     todoInput.value = "";
 
     const completedBtn = document.createElement("button");
-    completedBtn.innerHTML = '<i class="fas fa-check-double"></i>'
+    completedBtn.innerHTML = '<i class="fas fa-check"></i>'
     completedBtn.classList.add("completed-btn");
     todoDiv.appendChild(completedBtn);
 
@@ -35,6 +35,6 @@ button.addEventListener("click", (e) => {
 
     unordered.appendChild(todoDiv);
 
-    counter.innerText = ` ${allItems.length}`;
+    counter.innerText = `${allItems.length}`;
 
 })
